@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Pengguna</title>
+    <link rel="stylesheet" href="userpagebackground.css">
+    
+
+   
+                
+</head>
+<body>
+    <div class="user-container">
+        <h1>Profil Pengguna</h1>
+        <img src="image source/Login_free_icons_designed_by_Good_Ware-removebg-preview.png" alt="Contoh Gambar" class="responsive-image">
+        <div class="user-info">
+            <p><strong>Nama:</strong> <span id="userName">A4 ASCE</span></p>
+            <p><strong>Email:</strong> <span id="userEmail">ASCE</span></p>
+            <p><strong>Alamat:</strong> <span id="userAddress">ASCE</span></p>
+        </div>
+
+        <button id="editButton">Edit Profil</button>
+
+        <div id="editForm" class="hidden">
+            <h2>Perbarui Profil</h2>
+            
+            <form id="updateForm">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" value="John Doe" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="john.doe@example.com" required>
+                
+                <label for="address">Alamat:</label>
+                <input type="text" id="address" name="address" value="1234 Elm Street" required>
+                
+                <button type="submit">Simpan Perubahan</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('editButton').addEventListener('click', function() {
+            document.getElementById('editForm').classList.toggle('hidden');
+        });
+
+        document.getElementById('updateForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const address = document.getElementById('address').value;
+
+            document.getElementById('userName').textContent = name;
+            document.getElementById('userEmail').textContent = email;
+            document.getElementById('userAddress').textContent = address;
+
+            document.getElementById('editForm').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

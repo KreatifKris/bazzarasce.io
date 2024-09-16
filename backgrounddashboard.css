@@ -1,0 +1,30 @@
+/* Reset margin dan padding default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mengatur body dengan background gambar */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('fest.png'); /* Ganti dengan path gambar milikmu */
+    background-size: cover; /* Gambar menutupi seluruh halaman */
+    background-position: center; /* Posisi gambar di tengah */
+    background-attachment: fixed; /* Gambar tetap saat scrolling */
+    background-repeat: no-repeat; /* Mencegah gambar berulang */
+    height: 100vh; /* Menutupi seluruh tinggi viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling untuk konten utama */
+.container {
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6); /* Layer hitam semi transparan di atas gambar */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+}
